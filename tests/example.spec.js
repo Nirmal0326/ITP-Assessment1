@@ -203,6 +203,7 @@ test('Pos_Fun_0022: Spelling variation test', async ({ page }) => {
   const inputBox = page.getByPlaceholder('Input Your Singlish Text Here.');
   await inputBox.fill('puLuvandha kiYala kiyanna');
 
+  
   // Check for Sinhala output
   await page.waitForTimeout(3000);
 });
@@ -230,6 +231,15 @@ test('Pos_Fun_0025: Browser feature question', async ({ page }) => {
 
   const inputBox = page.getByPlaceholder('Input Your Singlish Text Here.');
   await inputBox.fill('microsoft edge browser eke translate feature eka hari slow dha?');
+
+  await expect(page.getByText('microsoft edge browser').last()).toBeVisible({ timeout: 10000 });
+});
+
+test('Neg_Fun_005: Browser feature question', async ({ page }) => {
+  await page.goto(TARGET_URL);
+
+  const inputBox = page.getByPlaceholder('Input Your Singlish Text Here.');
+  await inputBox.fill('adha mama oyata evva  instagram post ek baluvadha? ');
 
   await expect(page.getByText('microsoft edge browser').last()).toBeVisible({ timeout: 10000 });
 });
