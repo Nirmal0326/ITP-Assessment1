@@ -54,7 +54,7 @@ npm install
 Step 4: Install Playwright Browsers
 npx playwright install
 
-Executing the Tests
+git Executing the Tests
 
 Run all Playwright test cases using the following command:
 
