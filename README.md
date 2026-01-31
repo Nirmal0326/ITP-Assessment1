@@ -43,7 +43,7 @@ npm -v
 git --version
 Project Setup
 Step 1: Clone the Repository
-git clone https://github.com/Nirmal0326/ITP-Assessment1
+git clone https://github.com/Nirmal0326/ITP-Assessment1.git
 
 Step 2: Open the Project Folder
 cd SinglishToSinhalaTranslator
